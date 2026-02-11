@@ -5,6 +5,8 @@
         { "birth_rule": 3 }
     ],
     "env_rules": [
-        { "tick_rule": 15 }
+        { "tick_rule": 15 },
+        { "height_rule": 20 },
+        { "width_rule": 20 }
     ]
 }
