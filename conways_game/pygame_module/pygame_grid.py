@@ -12,26 +12,29 @@ class PygameGrid:
         self.clock = pygame.time.Clock()
 
     def evaluate_dimensions(self):
-        square_width = (self.resolution[0] / self.rows) - self.line_width * ((self.rows + 1) / self.rows)
-        square_height = (self.resolution[1] / self.cols) - self.line_width * ((self.cols + 1) / self.cols)
+        # Divide the resolution evenly among the cells, no explicit grid lines
+        square_width = self.resolution[0] / self.cols if self.cols > 0 else 0
+        square_height = self.resolution[1] / self.rows if self.rows > 0 else 0
         return (square_width, square_height)
 
     def convert_column_to_x(self, column, square_width):
-        x = self.line_width * (column + 1) + square_width * column
-        return x
+        # No line width offset, just multiply
+        return column * square_width
 
     def convert_row_to_y(self, row, square_height):
-        y = self.line_width * (row + 1) + square_height * row
-        return y
+        # No line width offset, just multiply
+        return row * square_height
 
     def draw_squares(self):
         square_width, square_height = self.evaluate_dimensions()
         for row in range(self.rows):
             for column in range(self.cols):
                 color = (100, 100, 100)  # Default color, will update for alive/dead
-                x = self.convert_column_to_x(column, square_width)
-                y = self.convert_row_to_y(row, square_height)
-                geometry = (x, y, square_width, square_height)
+                x = int(self.convert_column_to_x(column, square_width))
+                y = int(self.convert_row_to_y(row, square_height))
+                w = int(square_width)
+                h = int(square_height)
+                geometry = (x, y, w, h)
                 pygame.draw.rect(self.screen, color, geometry)
 
     def run(self):
