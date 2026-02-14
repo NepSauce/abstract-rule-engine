@@ -1,6 +1,6 @@
-from conways_game.env_manager import CellState
+from conways_game.cell_manager import CellState 
 
-class GridManager: 
+class EnvManager: 
     def __init__(self, rows, cols):
         self.grid = [[CellState.DEAD for _ in range(cols)] for _ in range(rows)]
     

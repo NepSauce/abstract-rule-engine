@@ -1,12 +1,8 @@
 {
-    "cell_rules": [
-        { "survival_min_rule": 2 },
-        { "survival_max_rule": 3 },
-        { "birth_rule": 3 }
-    ],
-    "env_rules": [
-        { "tick_rule": 15 },
-        { "height_rule": 20 },
-        { "width_rule": 20 }
-    ]
+    "survival_min_rule": 2,
+    "survival_max_rule": 3,
+    "birth_rule": 3,
+    "tick_rule": 15,
+    "height_rule": 20,
+    "width_rule": 20
 }
