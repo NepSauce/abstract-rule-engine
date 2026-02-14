@@ -1,9 +1,7 @@
 import pygame
 from util.json_reader import JsonReader
 
-rule_reader = util.json_reader.read_json_file('rules_config.json')
-pygame.init()
-
+rule_reader = JsonReader.read_json_file('rules_config.json')
 
 resolution = (800, 800)
 screen = pygame.display.set_mode(resolution)
