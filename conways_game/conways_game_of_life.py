@@ -6,8 +6,7 @@ class GameOfLife:
     def __init__(self, dimension_rule_arr, survival_rule_arr):
         self.env_manager = EnvManager(dimension_rule_arr[0], dimension_rule_arr[1])
         self.pygame_grid = PygameGrid(self.env_manager.grid)
-        self.height_rule = dimension_rule_arr[0]
-        self.width_rule = dimension_rule_arr[1]
+        self.dimension_rule_arr = dimension_rule_arr
         self.survival_rule_arr = survival_rule_arr
         self.isPaused = False
 
@@ -15,11 +14,11 @@ class GameOfLife:
         self.pygame_grid.run()
 
         while not self.isPaused:
-            self.update(self.survival_rule_arr)
+            self.update()
             self.render()
 
-    def update(self, survival_rule_arr):
-        self.env_manager.update_grid(self.height_rule, self.width_rule)
+    def update(self):
+        self.env_manager.update_grid(self.dimension_rule_arr, self.survival_rule_arr)
 
     def render(self):
         self.pygame_grid.draw_squares()
