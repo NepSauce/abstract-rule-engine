@@ -1,5 +1,4 @@
 from conways_game.env_manager import EnvManager
-from conways_game.cell_manager import CellManager
 from conways_game.pygame_module.pygame_grid import PygameGrid
 
 class GameOfLife:
