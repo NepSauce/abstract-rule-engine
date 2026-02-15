@@ -6,3 +6,8 @@ class EnvManager:
     
     def set_cell(self, row_index, col_index, state):
         self.grid[row_index][col_index] = state
+
+    def update_grid(self, height_rule, width_rule):
+        # Placeholder for the logic to update the grid based on the rules
+        pass
+

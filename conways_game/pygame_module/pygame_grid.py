@@ -1,4 +1,3 @@
-
 import pygame
 
 class PygameGrid:
@@ -47,4 +46,13 @@ class PygameGrid:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
+        pygame.quit()
+
+    def pause(self):
+        self.isPaused = True
+        
+        while self.isPaused:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    self.isPaused = False
         pygame.quit()
