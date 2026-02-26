@@ -1,4 +1,6 @@
-
+<p align="center">
+  <img src="game.gif" alt="Demo GIF" style="width:100%;max-width:1000px;display:block;margin:auto;" />
+</p>
 
 # Conway's Rule Engine
 
