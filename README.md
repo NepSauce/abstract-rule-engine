@@ -69,17 +69,7 @@ All simulation parameters are configured via `rules_config.json`:
 
 ## Example Configurations
 
-### Classic Conway's Game of Life
-```json
-    "survival_min_rule": 2,
-    "survival_max_rule": 3,
-    "birth_rule": 3,
-    "continuous_spawn_rate": 0.0,
-    "continuous_spawn_direction": "none"
-}
-```
-
-### Flowing Animation (Google-style)
+### Flowing 
 ```json
 {
     "survival_min_rule": 2,
@@ -95,12 +85,4 @@ All simulation parameters are configured via `rules_config.json`:
 ## Controls
 
 - Close the window to exit the simulation
-
-## Future Extensions
-
-The modular architecture allows for:
-- Custom rule engines beyond Conway's Game of Life
-- User-defined cellular automata rules
-- Interactive cell placement and editing
-- Pattern saving and loading
 
