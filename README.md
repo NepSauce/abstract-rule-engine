@@ -1,4 +1,6 @@
-
+<p align="center">
+  <img src="game.gif" alt="Demo GIF" style="width:100%;max-width:1000px;display:block;margin:auto;" />
+</p>
 
 # Conway's Rule Engine
 
@@ -69,7 +71,6 @@ All simulation parameters are configured via `rules_config.json`:
 
 ### Classic Conway's Game of Life
 ```json
-{
     "survival_min_rule": 2,
     "survival_max_rule": 3,
     "birth_rule": 3,
